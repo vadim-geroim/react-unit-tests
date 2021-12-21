@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Rating } from "./components/Rating";
+import Switcher from "./components/Switcher";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,6 +12,10 @@ ReactDOM.render(
     <Rating value={3} />
     <Rating value={2} />
     <Rating value={1} />
+    <br />
+    <Switcher />
+    <Switcher />
+    <Switcher />
   </React.StrictMode>,
   document.getElementById("root")
 );
