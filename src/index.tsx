@@ -4,6 +4,26 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Rating } from "./components/Rating";
 import Switcher from "./components/Switcher";
+import DestructObj from "./components/DestructObj";
+import DestructArr from "./components/DestructArr";
+
+let data = {
+  name: "Pete",
+  age: 30,
+  salary: 30000,
+  address: {
+    street: {
+      name: "Main",
+      isClean: true,
+      isCriminal: false,
+    },
+  },
+};
+
+let arr = [
+  { name: "James", age: 33 },
+  { name: "Alis", age: 22 },
+];
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +36,8 @@ ReactDOM.render(
     <Switcher />
     <Switcher />
     <Switcher />
+    <DestructObj data={data} />
+    <DestructArr arr={arr} />
   </React.StrictMode>,
   document.getElementById("root")
 );
