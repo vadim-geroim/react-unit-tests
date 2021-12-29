@@ -31,13 +31,5 @@ function Star(props: StarType) {
         props.setRating(rating);
     }
 
-    if (props.selected === true) {
-        return (
-            <span onClick={onClickHandler} order={props.order} >
-                <b>Star</b>
-            </ span >
-        );
-    } else {
-        return <span onClick={onClickHandler} order={props.order}> Star</span >;
-    }
+    return <span onClick={onClickHandler} order={props.order}>{props.selected ? <b>Star</b> : "Star"}</span>
 }
