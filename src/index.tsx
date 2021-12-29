@@ -6,6 +6,7 @@ import { Rating } from "./components/Rating";
 import Switcher from "./components/Switcher";
 import DestructObj from "./components/DestructObj";
 import DestructArr from "./components/DestructArr";
+import { UncontrolledRating } from "./components/UncontrolledRating";
 
 let data = {
   name: "Pete",
@@ -38,6 +39,7 @@ ReactDOM.render(
     <Switcher />
     <DestructObj data={data} />
     <DestructArr arr={arr} />
+    <UncontrolledRating />
   </React.StrictMode>,
   document.getElementById("root")
 );
