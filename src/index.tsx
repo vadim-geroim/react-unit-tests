@@ -31,9 +31,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <br />
-    <Switcher />
-    <Switcher />
-    <Switcher />
+
     <DestructObj data={data} />
     <DestructArr arr={arr} />
     <UncontrolledRating />
