@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-type RatingType = {
-    value: number;
-};
-
 export function UncontrolledRating() {
     const [rating, setRating] = useState(1);
 
@@ -21,15 +17,15 @@ export function UncontrolledRating() {
 
 type StarType = {
     selected: boolean;
-    order: Number;
+    order: 1 | 2 | 3 | 4 | 5;
+    setRating: (value: 1 | 2 | 3 | 4 | 5) => void;
 };
 
 
 function Star(props: StarType) {
-    const onClickHandler = (e) => {
-        const rating = e.currentTarget.getAttribute('order');
-        props.setRating(rating);
+    const onClickHandler = () => {
+        props.setRating(props.order);
     }
 
-    return <span onClick={onClickHandler} order={props.order}>{props.selected ? <b>Star</b> : "Star"}</span>
+    return <span onClick={onClickHandler} >{props.selected ? <b>Star</b> : "Star"}</span>
 }
