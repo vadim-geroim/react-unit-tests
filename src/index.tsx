@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { Rating } from "./components/Rating";
 import Switcher from "./components/Switcher";
 import DestructObj from "./components/DestructObj";
 import DestructArr from "./components/DestructArr";
+import { App } from "./App";
 import { UncontrolledRating } from "./components/UncontrolledRating";
+import { useState } from "react";
 
 let data = {
   name: "Pete",
@@ -28,11 +29,7 @@ let arr = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <Rating value={5} />
-    <Rating value={4} />
-    <Rating value={3} />
-    <Rating value={2} />
-    <Rating value={1} />
+    <App />
     <br />
     <Switcher />
     <Switcher />
