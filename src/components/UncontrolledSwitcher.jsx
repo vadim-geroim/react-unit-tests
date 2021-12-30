@@ -49,7 +49,7 @@ export default function UncontrolledSwitcher() {
         border: "2px solid black",
         backgroundColor: isOn ? "green" : "red",
     };
-
+    //test comments
     return (
         <div style={switcherWrapperStyle}>
             <h2 style={titleStyle}>Uncontrolled Switcher:</h2>
