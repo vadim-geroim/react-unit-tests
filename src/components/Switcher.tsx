@@ -7,6 +7,10 @@ const switcherWrapperStyle = {
   marginTop: 50,
 };
 
+const titleStyle = {
+  marginRight: 10,
+};
+
 const onStyle = {
   display: "flex",
   alignItems: "center",
@@ -35,23 +39,32 @@ const offStyle = {
   cursor: "pointer",
 };
 
-export default function Switcher() {
-  let [isOn, setIsOn] = useState(false);
+type SwithcerType = {
+  value: boolean;
+  setSwitcherValue: (value: boolean) => void;
+};
 
+export default function Switcher(props: SwithcerType) {
   const indicatorStyle = {
     width: 28,
     height: 28,
     borderRadius: 30,
     border: "2px solid black",
-    backgroundColor: isOn ? "green" : "red",
+    backgroundColor: "grey",
   };
+
+  const filterOnHandler = () => props.setSwitcherValue(true);
+  const filterOffHandler = () => props.setSwitcherValue(false);
+
+  indicatorStyle.backgroundColor = props.value ? "green" : "red";
 
   return (
     <div style={switcherWrapperStyle}>
-      <div style={onStyle} onClick={() => setIsOn(true)}>
+      <h2 style={titleStyle}>Controlled Switcher: </h2>
+      <div style={onStyle} onClick={filterOnHandler}>
         On
       </div>
-      <div style={offStyle} onClick={() => setIsOn(false)}>
+      <div style={offStyle} onClick={filterOffHandler}>
         Off
       </div>
       <div style={indicatorStyle}>&nbsp;</div>

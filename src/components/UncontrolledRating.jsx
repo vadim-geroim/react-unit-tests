@@ -27,5 +27,7 @@ function Star(props: StarType) {
         props.setRating(props.order);
     }
 
-    return <span onClick={onClickHandler} >{props.selected ? <b>Star</b> : "Star"}</span>
+    return <div>
+        <span onClick={onClickHandler} >{props.selected ? <b>Star</b> : "Star"}</span>
+    </div>
 }

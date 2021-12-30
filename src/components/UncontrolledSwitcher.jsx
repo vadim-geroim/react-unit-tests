@@ -35,6 +35,10 @@ const offStyle = {
     cursor: "pointer",
 };
 
+const titleStyle = {
+    marginRight: 10
+}
+
 export default function UncontrolledSwitcher() {
     let [isOn, setIsOn] = useState(false);
 
@@ -48,6 +52,7 @@ export default function UncontrolledSwitcher() {
 
     return (
         <div style={switcherWrapperStyle}>
+            <h2 style={titleStyle}>Uncontrolled Switcher:</h2>
             <div style={onStyle} onClick={() => setIsOn(true)}>
                 On
             </div>
